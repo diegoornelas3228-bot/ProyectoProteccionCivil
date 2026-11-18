@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red de Laboratorios y Control Químico | Protección Civil</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- Barra superior institucional (igual a la franja negra superior) -->
+    <div class="top-bar">
+        <div class="top-bar-links">
+            <span>Sistema de Gestión Química</span>
+            <span>|</span>
+            <span>Normativa NFPA 704</span>
+            <span>|</span>
+            <span>Hojas de Seguridad</span>
+        </div>
+    </div>
+
+    <!-- Cabecera principal guinda (igual al encabezado de la captura) -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo-placeholder">
+                <!-- Puedes reemplazar este SVG por <img src="img/tu-logo.png" alt="Logo"> cuando tengas el oficial -->
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <path d="M9 12l2 2 4-4"/>
+                </svg>
+            </div>
+            <div class="header-titles">
+                <h1>DIRECCIÓN DE LABORATORIOS Y RIESGOS QUÍMICOS</h1>
+                <p>Red de Control de Sustancias, Seguridad e Higiene Industrial</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Barra de navegación blanca con buscador integrado -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="#inicio" class="active">INICIO</a>
+                <a href="#laboratorios">LABORATORIOS</a>
+                <a href="#inventario">INVENTARIO QUÍMICO</a>
+                <a href="#protocolos">PROTOCOLOS</a>
+                <a href="#normativa">NORMATIVA</a>
+            </div>
+            <div class="nav-tools">
+                <a href="#inventario" class="search-icon" title="Ir al buscador de reactivos">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Principal estilo Institucional con Ondas Vectoriales -->
+    <section id="inicio" class="hero-banner">
+        <!-- Ondas decorativas de fondo similares a la imagen -->
+        <svg class="hero-waves" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="2" d="M0,64 C320,160 640,0 1440,128"></path>
+            <path fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="2" d="M0,96 C360,192 720,32 1440,160"></path>
+            <path fill="none" stroke="rgba(255,255,255,0.14)" stroke-width="2" d="M0,128 C400,224 800,64 1440,192"></path>
+            <path fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="2" d="M0,160 C440,256 880,96 1440,224"></path>
+        </svg>
+
+        <!-- Barra de accesos rápidos flotante a la derecha (como los iconos sociales de la captura) -->
+        <div class="floating-badges">
+            <a href="#inventario" title="Inventario Químico">HDS</a>
+            <a href="#laboratorios" title="Laboratorios">LAB</a>
+            <a href="#protocolos" title="Rombo NFPA">704</a>
+        </div>
+
+        <div class="hero-content">
+            <button class="hero-arrow" aria-label="Anterior">&#10094;</button>
+            
+            <div class="hero-text">
+                <h2 class="hero-title-gold">Plataforma de Gestión y Control Químico</h2>
+                <h3 class="hero-title-white">Consulta de Reactivos y Seguridad en Laboratorios</h3>
+                <p class="hero-subtitle">Herramienta de apoyo para la identificación de riesgos, incompatibilidades y manejo seguro de sustancias.</p>
+                <div class="hero-hashtag">
+                    <span class="tag-gold">#Seguridad</span><span class="tag-red">Química</span>
+                </div>
+            </div>
+
+            <button class="hero-arrow" aria-label="Siguiente">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Complementos de Acceso Rápido (Tarjetas estructurales sin datos inventados) -->
+    <section id="laboratorios" class="quick-access-bar">
+        <div class="qa-card" onclick="filtrarPorBoton('todos')">
+            <div class="qa-icon">01</div>
+            <div>
+                <h4>Catálogo General</h4>
+                <p>Ver todos los reactivos registrados</p>
+            </div>
+        </div>
+        <div class="qa-card" onclick="filtrarPorBoton('Química Analítica')">
+            <div class="qa-icon">02</div>
+            <div>
+                <h4>Química Analítica</h4>
+                <p>Filtrar sustancias del área</p>
+            </div>
+        </div>
+        <div class="qa-card" onclick="filtrarPorBoton('Bioquímica')">
+            <div class="qa-icon">03</div>
+            <div>
+                <h4>Bioquímica</h4>
+                <p>Filtrar sustancias del área</p>
+            </div>
+        </div>
+        <div class="qa-card" onclick="filtrarPorBoton('Almacén General')">
+            <div class="qa-icon">04</div>
+            <div>
+                <h4>Almacén General</h4>
+                <p>Filtrar sustancias en resguardo</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenido principal (Tabla de Inventario y Rombo NFPA) -->
+    <main class="container">
+        <section id="inventario" class="card">
+            <h2>Consulta de Reactivos y Seguridad NFPA 704</h2>
+            <div class="search-box">
+                <input type="text" id="buscador" placeholder="Buscar por nombre, fórmula (ej. H2SO4), CAS o laboratorio...">
+                <select id="filtroLab">
+                    <option value="todos">Todos los laboratorios</option>
+                    <option value="Química Analítica">Lab. Química Analítica</option>
+                    <option value="Bioquímica">Lab. Bioquímica</option>
+                    <option value="Almacén General">Almacén General de Reactivos</option>
+                </select>
+            </div>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Reactivo</th>
+                            <th>Fórmula</th>
+                            <th>No. CAS</th>
+                            <th>Laboratorio</th>
+                            <th>Cantidad</th>
+                            <th>Riesgo (S-I-R)</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaQuimicos">
+                        <!-- Se llena con app.js -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Panel de detalle NFPA -->
+        <section id="detalleModal" class="card hidden">
+            <div class="modal-header">
+                <h3 id="detalleTitulo">Ficha Técnica del Reactivo</h3>
+                <button onclick="cerrarDetalle()" class="btn-cerrar">Cerrar</button>
+            </div>
+            <div class="detalle-grid">
+                <div class="rombo-container">
+                    <div class="rombo">
+                        <div class="cuadro salud" id="nfpaSalud" title="Salud">0</div>
+                        <div class="cuadro inflamabilidad" id="nfpaInflamabilidad" title="Inflamabilidad">0</div>
+                        <div class="cuadro reactividad" id="nfpaReactividad" title="Reactividad">0</div>
+                        <div class="cuadro especial" id="nfpaEspecial" title="Riesgo Especial">-</div>
+                    </div>
+                    <small>Rombo de Seguridad NFPA 704</small>
+                </div>
+                <div class="info-tecnica">
+                    <p><strong>Ubicación exacta:</strong> <span id="detalleUbicacion"></span></p>
+                    <p><strong>Equipo de Protección Personal (EPP):</strong> <span id="detalleEPP"></span></p>
+                    <p><strong>Incompatibilidades:</strong> <span id="detalleIncomp"></span></p>
+                    <p><strong>Acción en caso de derrame:</strong> <span id="detalleDerrame"></span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+    <script>
+        // Función auxiliar para conectar las tarjetas superiores con el filtro de la tabla
+        function filtrarPorBoton(lab) {
+            const select = document.getElementById("filtroLab");
+            select.value = lab;
+            renderizarTabla();
+            document.getElementById("inventario").scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+</body>
+</html>
